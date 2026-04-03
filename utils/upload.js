@@ -36,5 +36,9 @@ module.exports = {
         storage: storageSetting,
         limits: 5 * 1024 * 1024,
         fileFilter: filterExcel
+    }),
+    uploadFile: multer({
+        storage: storageSetting,
+        limits: 10 * 1024 * 1024 // 10MB
     })
-}
+}

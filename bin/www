@@ -20,6 +20,9 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+const { initSocket } = require('../utils/socketHandler');
+const io = initSocket(server);
+app.set('io', io); // Gắn io vào app để router truy cập
 
 /**
  * Listen on provided port, on all network interfaces.
